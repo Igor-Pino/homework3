@@ -5,6 +5,7 @@
     --accent-background-color: #F5F4FA;
 
     --border-color: #EEEEEE;
+    --shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
 
     --main-logo-color: #000000;
@@ -233,6 +234,8 @@ h2,h3 {
 .section {
   /* outline: 1px solid black; */
   width: 1600px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
@@ -240,8 +243,6 @@ h2,h3 {
 }
 
 .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
   padding-right: 15px;
   padding-left: 15px;
   width: 1200px;
@@ -253,13 +254,15 @@ h2,h3 {
 
 .features {
   display: flex;
-  text-align: start;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .features-item {
-  width: 270px;
-  height: 101px;
+  flex-basis: calc((100% - 30px * 4) / 4) ;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 .features .title {
@@ -277,17 +280,26 @@ h2,h3 {
 }
 
 /* our services */
+
 .services {
   padding-top: 0px;
 }
+
 .services-title {
   margin-bottom: 50px;
 }
+
 .services-ul {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 30px;
 }
-.services-ul-item:not(:last-child) {
-  margin-right: 30px;
+
+.services-ul-item {
+  flex-basis: calc((100% - 30px * 3) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 /* our team */
@@ -298,17 +310,18 @@ h2,h3 {
 
 .our-team {
   display: flex;
-  text-align: center;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .team-list-item {
-  width: 270px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-basis: calc((100% - 30px * 4) / 4);
+  margin-top: 30px;
+  margin-left: 30px;
+  box-shadow: var(--shadow);
   border-radius: 0px 0px 4px 4px; 
-}
-
-.team-list-item:not(:last-child) {
-  margin-right: 30px;
+  text-align: center;
 }
 
 .team-mamber {
@@ -317,16 +330,16 @@ font-size: 16px;
 line-height: 1.9;
 color: var(--title-text-color);
 }
+
 .team-list-content {
   margin-top: 10px;
   margin-bottom: 30px;
 }
 
   
-
 /* FOOTER */
 
-footer {
+.footer {
 width: 1600px;
 margin-top: 0;
 margin-bottom: 0;
@@ -337,6 +350,7 @@ padding-bottom: 60px;
 padding-left: 215px;
 background-color: var(--second-background-color);
 }
+
 .address {
 font-style: normal;
 font-weight: 400;
@@ -344,7 +358,6 @@ font-size: 14px;
 line-height: 1.71;
 color: var(--second-text-accent-color);
 }
-
 
 
 /* PORTFOLIO */
@@ -375,35 +388,27 @@ color: var(--second-text-accent-color);
 /*examples */
       /*створює сітку портфоліо*/
 .examples {
-   display: flex;
-   flex-wrap: wrap;
-   margin-left: -30px;
-   margin-bottom: -30px;
-
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .examples-item {
-   flex-basis: calc(100% / 3 - 30px);
-   border: 1px solid var(--border-color);
-   margin-left: 30px;
-   margin-bottom: 30px;
+  flex-basis: calc((100% - 30px * 3) / 3);
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid var(--border-color);
 }
-
-      /*створив картку портфоліо як у Репети */
-
+     /*створив картку портфоліо як у Репети */
 .card {
   background: var(--second-text-accent-color);
   border: 1px solid var(--border-color);
 }
 
-.card-thumb{
-margin-bottom: 20px;
-}
-
 .card-content {
 padding: 20px 24px;
 }
-
      /* заголовок картки портфоліо */
 .example {
    margin-bottom: 4px;
@@ -428,4 +433,9 @@ padding: 20px 24px;
 
  
 
+
+ 
+ 
+  
+  
   
