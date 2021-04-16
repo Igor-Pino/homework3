@@ -6,6 +6,7 @@
     --accent-background-color: #F5F4FA;
 
     --border-color: #EEEEEE;
+    --header-border-color: #ECECEC; 
     --shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
 
@@ -106,17 +107,14 @@ h2,h3 {
 
 /* HEADER */
 
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 .header-nav {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ECECEC;
 }
-
-
-
-
-
-
 
 /* logo style */
 
