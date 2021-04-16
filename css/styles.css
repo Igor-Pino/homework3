@@ -1,6 +1,7 @@
 
 :root {
     --main-background-color: #E5E5E5;
+    --body-background-color: #FFFFFF;
     --second-background-color: #2F303A;
     --accent-background-color: #F5F4FA;
 
@@ -24,7 +25,7 @@
 
 
 body {
-  background-color: var(--main-background-color); 
+  background-color: var(--body-background-color); 
   color: var(--primary-text-color);
   font-family: var(--font-main);
   font-weight: 500;
@@ -62,7 +63,6 @@ h2,h3 {
 
 /* section titles */
 .section-title {
-
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -83,45 +83,61 @@ h2,h3 {
   overflow: hidden;
 }
 
+/* SECTIONS AND CONTAINERS */
+
+.section {
+  /* outline: 1px solid black; */
+  width: 1600px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* HEADER */
 
 .header-nav {
-  border: 1px solid #ECECEC;
   display: flex;
-  align-items: center; 
-
-  width: 1600px;
-  height: 80px;
-
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-
-  /* outline: 2px solid red; */
+  align-items: center;
+  border-bottom: 1px solid #ECECEC;
 }
+
+
+
+
+
+
 
 /* logo style */
 
 .logo, .footer-logo {
-  text-decoration: none;
   font-family:var(--font-second);
+  text-decoration: none;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--main-logo-color);  
 }
-  .logo-part {
-   color: var(--accent-text-color);  
-  }
-  .footer-logo {
-    color: var(--second-text-accent-color);
-  }
-  .logo {
-    margin-right: 93px;
-    margin-left: 215px;
-  }
+
+.logo-part {
+  color: var(--accent-text-color);  
+}
+.footer-logo {
+ color: var(--second-text-accent-color);
+}
+.logo {
+ margin-right: 93px;
+}
 
 /* site-nav */
 
@@ -161,7 +177,6 @@ h2,h3 {
 .contacts-nav {
   display: flex;
   margin-left: auto;
-  margin-right: 215px;
 }
 .contacts-nav-li:not(:last-child) {
   margin-right: 50px;
@@ -188,9 +203,6 @@ h2,h3 {
 /* Hero section */
 
 .hero {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -198,8 +210,13 @@ h2,h3 {
   background-color: var(--second-background-color);
 }
 .hero-title {
-  margin: 0px 452px 30px;
-
+  display: block;
+  width: 696px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
@@ -226,30 +243,8 @@ h2,h3 {
   
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
 }
 
-/* SECTIONS AND CONTAINERS */
-
-.section {
-  /* outline: 1px solid black; */
-  width: 1600px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-}
- 
 /* features */
 
 .features {
@@ -266,6 +261,7 @@ h2,h3 {
 }
 
 .features .title {
+  text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -292,8 +288,8 @@ h2,h3 {
 .services-ul {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .services-ul-item {
@@ -316,6 +312,7 @@ h2,h3 {
 }
 
 .team-list-item {
+
   flex-basis: calc((100% - 30px * 4) / 4);
   margin-top: 30px;
   margin-left: 30px;
@@ -323,40 +320,33 @@ h2,h3 {
   border-radius: 0px 0px 4px 4px; 
   text-align: center;
 }
-
-.team-mamber {
-margin-top: 30px;
-font-size: 16px;
-line-height: 1.9;
-color: var(--title-text-color);
+.team-list-content {
+  padding: 30px 15px;
 }
 
-.team-list-content {
-  margin-top: 10px;
-  margin-bottom: 30px;
+.team-mamber {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--title-text-color);
 }
 
   
 /* FOOTER */
 
-.footer {
-width: 1600px;
-margin-top: 0;
-margin-bottom: 0;
-margin-left: auto;
-margin-right: auto;
-padding-top: 60px;
-padding-bottom: 60px;
-padding-left: 215px;
-background-color: var(--second-background-color);
+footer {
+  background-color: var(--second-background-color);
 }
-
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .address {
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-color: var(--second-text-accent-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-text-accent-color);
 }
 
 
@@ -374,6 +364,10 @@ color: var(--second-text-accent-color);
 }
 
 .filter-item {
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-background-color);
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -382,7 +376,8 @@ color: var(--second-text-accent-color);
 
 .filter-item:hover,
 .filter-item:focus {
-  color: var(--accent-text-color);
+ background-color: var(--accent-text-color);
+ color: var(--second-text-accent-color);
 }
   
 /*examples */
@@ -398,16 +393,17 @@ color: var(--second-text-accent-color);
   flex-basis: calc((100% - 30px * 3) / 3);
   margin-top: 30px;
   margin-left: 30px;
-  border: 1px solid var(--border-color);
 }
      /*створив картку портфоліо як у Репети */
 .card {
   background: var(--second-text-accent-color);
   border: 1px solid var(--border-color);
 }
-
 .card-content {
-padding: 20px 24px;
+  padding: 20px 24px;
+  border-left: 1px solid var(--border-color); 
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
      /* заголовок картки портфоліо */
 .example {
@@ -419,8 +415,8 @@ padding: 20px 24px;
    color: var(--title-text-color);
 }
      /* абзац картки портфоліо */
-.examples p {
-  margin: 0;
+.card-text {
+   margin: 0;
    font-weight: 400;
    font-size: 16px;
    line-height: 30px;
